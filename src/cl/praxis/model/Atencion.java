@@ -54,4 +54,14 @@ public class Atencion {
   public void setRealizacion(Date realizacion) {
     this.realizacion = realizacion;
   }
+
+  @Override
+  public String toString() {
+    return "Atencion{" +
+            "id=" + id +
+            ", mascota=" + mascota.getNombre() +
+            ", tipoAtencion=" + tipoAtencion.getName() +
+            ", realizacion=" + realizacion.toString() +
+            '}';
+  }
 }

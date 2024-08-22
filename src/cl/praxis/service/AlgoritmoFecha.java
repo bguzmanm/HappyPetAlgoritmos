@@ -38,7 +38,8 @@ public class AlgoritmoFecha {
                 }
               }
       ).toList();
-    agendaDia.forEach(System.out::println);
+    //agendaDia.forEach(System.out::println);
+    mostrarAgenda(agendaDia);
   }
 
   public Date toFecha(String fechaStr) throws ParseException {
@@ -57,6 +58,13 @@ public class AlgoritmoFecha {
     }
     Matcher matcher = PATRON_FECHA.matcher(fecha);
     return matcher.matches();
+  }
+
+  public void mostrarAgenda(List<Atencion> agenda){
+    agenda.forEach(atencion -> {
+      System.out.println(atencion.getMascota().getTipoMascota().getDescripcion() + " " +
+        atencion.getMascota().getNombre() + " tiene " + atencion.getTipoAtencion().getName());
+    });
   }
 
 }

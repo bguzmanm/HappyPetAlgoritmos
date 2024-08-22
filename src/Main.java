@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 public class Main {
   public static void main(String[] args) {
-    List<Inventario> listado = new ArrayList<>();
+/*    List<Inventario> listado = new ArrayList<>();
 
     listado.add(new Inventario(1, "producto 1", "hola", 10,
             new TipoProducto(1, "Accesorio"),
@@ -38,31 +38,30 @@ public class Main {
 
     int sucursalId = leerIntPorConsola("Ingresa el id de sucursal: ");
 
-    algo.validarExistenciasPorSucursal(sucursalId, listado);
-/*
+    algo.validarExistenciasPorSucursal(sucursalId, listado);*/
     List<Atencion> agenda = new ArrayList<>();
 
     agenda.add(new Atencion(1,
-            new Mascota(1, "perro", "perro",
-                    new TipoMascota(1, "perros"))
-    , new TipoAtencion(1, "Medica"), new Date()));
+            new Mascota(1, "Samuel", "perro",
+                    new TipoMascota(1, "Perro"))
+    , new TipoAtencion(1, "Atención Médica"), new Date()));
     agenda.add(new Atencion(2,
-            new Mascota(2, "gato", "gato",
-                    new TipoMascota(1, "gatos"))
-    , new TipoAtencion(1, "Medica"), new Date()));
+            new Mascota(2, "Rosita", "gato",
+                    new TipoMascota(1, "Gato"))
+    , new TipoAtencion(1, "Atención Médica"), new Date()));
     agenda.add(new Atencion(3,
-            new Mascota(3, "gato 3", "gato",
-                    new TipoMascota(1, "gatos"))
+            new Mascota(3, "Oregano", "gato",
+                    new TipoMascota(1, "Gato"))
     , new TipoAtencion(2, "Cirujía"), new Date()));
 
     AlgoritmoFecha af = new AlgoritmoFecha();
 
     try {
-      af.agendaPorDia("2024-08-19", agenda);
+      af.agendaPorDia("2024-08-21", agenda);
 
     } catch (ParseException p){
       p.printStackTrace();
-    }*/
+    }
 
 
   }
